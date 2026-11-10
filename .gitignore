@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# 虚拟环境 / uv
+.venv/
+venv/
+
+# 构建产物
+build/
+dist/
+*.spec
+*.exe
+
+# 日志
+*.log
+logs/
+
+# IDE
+.idea/
+.vscode/
+
+# 系统文件
+Thumbs.db
+.DS_Store
