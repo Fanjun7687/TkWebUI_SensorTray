@@ -1,0 +1,2 @@
+# 固定本项目使用 Python 3.11（与 tkwebui 工程一致，uv 托管的 CPython 3.11.15）
+3.11

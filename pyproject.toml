@@ -1,0 +1,27 @@
+[project]
+name = 'tkwebui-sensor-tray'
+version = '0.1.0'
+description = 'tkwebui 传感器托盘示例：实时曲线 + 系统托盘（复用上一级 tkwebui 工程）'
+requires-python = '>=3.11,<3.12'
+
+dependencies = [
+    # 与 tkwebui 工程 .venv 中已安装的版本保持一致（协议可选依赖，见 AGENTS.md 第 8 节）
+    'pyserial==3.5',        # 串口
+    'pymodbus==3.16.1',     # Modbus TCP / RTU
+    'paho-mqtt==2.1.0',     # MQTT
+    'python-can==4.6.1',    # CAN / CANopen
+    'asyncua==2.1.0',       # OPC UA
+    # 上一级 tkwebui 工程：托盘项目代码 from tkwebui import ... 依赖它，
+    # 以可编辑路径依赖方式安装进本 .venv（与 tkwebui 工程自身 venv 的安装方式相同）
+    'tkwebui',
+]
+
+[dependency-groups]
+dev = []
+
+[tool.uv]
+# 纯脚本项目（live_chart.py / live_chart_tray.py / trayicon.py），不把本目录作为包安装
+package = false
+
+[tool.uv.sources]
+tkwebui = { path = '../tkwebui', editable = true }
