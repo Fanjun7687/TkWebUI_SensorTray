@@ -1,2 +1,1 @@
-"# TkWebUI_SensorTray" 
-"# TkWebUI_SensorTray" 
+tkwebui 项目里"实时数据采集 → 曲线显示"这条链路的数据流、模块职责与关键逻辑
